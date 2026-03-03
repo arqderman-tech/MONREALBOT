@@ -1,0 +1,30 @@
+name: MONREALBOT – Scraper Diario
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Instalar dependencias
+        run: pip install requests beautifulsoup4 pandas
+      - name: Scraper
+        run: python monreal.py
+      - name: Analizar
+        run: python analizar_precios.py
+      - name: Generar web
+        run: python generar_web.py
+      - name: Commit y push
+        run: |
+          git config user.name "monrealbot"
+          git config user.email "bot@monrealbot.github.io"
+          git add -A
+          git diff --cached --quiet || git commit -m "🥪 Update $(date +'%Y-%m-%d')"
+          git push
