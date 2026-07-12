@@ -1,6 +1,6 @@
 {
   "variacion_dia": 0.0,
-  "variacion_mes": 9.38,
+  "variacion_mes": 0.0,
   "total_productos": 35,
   "categorias": {
     "Sandwiches Calientes": {
@@ -12,5 +12,5 @@
       "variacion_dia": 0.0
     }
   },
-  "fecha_actualizacion": "2026-07-11"
+  "fecha_actualizacion": "2026-07-12"
 }
