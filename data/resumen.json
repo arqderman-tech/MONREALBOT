@@ -1,16 +1,16 @@
 {
-  "variacion_dia": 0.0,
-  "variacion_mes": 0.0,
+  "variacion_dia": 5.03,
+  "variacion_mes": 5.03,
   "total_productos": 35,
   "categorias": {
     "Sandwiches Calientes": {
       "total": 31,
-      "variacion_dia": 0.0
+      "variacion_dia": 5.01
     },
     "Triples Especiales": {
       "total": 4,
-      "variacion_dia": 0.0
+      "variacion_dia": 5.2
     }
   },
-  "fecha_actualizacion": "2026-08-18"
+  "fecha_actualizacion": "2026-08-19"
 }
